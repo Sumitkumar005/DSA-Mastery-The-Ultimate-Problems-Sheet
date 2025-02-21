@@ -1,0 +1,2606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ultimate DSA Sheet</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" />
+  <style>
+    /* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Reset & Global Settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #FDFDFD;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #F78DA7, #C34A36);
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+header p {
+  font-size: 1.1rem;
+}
+
+/* Navigation Bar */
+nav {
+  background: #fff;
+  border-bottom: 2px solid #F78DA7;
+  padding: 10px 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+nav a {
+  font-size: 1rem;
+  color: #C34A36;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #F78DA7;
+}
+
+/* Main Content */
+main {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Section Titles */
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #C34A36;
+  border-bottom: 2px solid #F78DA7;
+  padding-bottom: 5px;
+}
+
+/* Details & Summary */
+details summary {
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: #FDFDFD;
+  border: 2px solid #F78DA7;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-bottom: 10px;
+}
+details summary:hover {
+  background: #F8E1E7;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+thead tr {
+  background: #F78DA7;
+  color: #fff;
+}
+thead th {
+  padding: 12px;
+  border: 1px solid #F78DA7;
+}
+tbody tr:nth-child(even) {
+  background: #FAF3F3;
+}
+tbody tr:nth-child(odd) {
+  background: #fff;
+}
+tbody td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+/* Footer */
+footer {
+  background: #C34A36;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav a {
+    margin: 0 8px;
+    font-size: 0.9rem;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+    
+    /* Reset & Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f0f4f8;
+      color: #333;
+      line-height: 1.6;
+    }
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1em;
+      margin-bottom: 10px;
+    }
+    /* Progress Bar */
+    .progress-container {
+      width: 100%;
+      max-width: 800px;
+      background: #ddd;
+      border-radius: 20px;
+      overflow: hidden;
+      margin: 10px auto;
+    }
+    .progress-bar {
+      height: 20px;
+      width: 0;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      border-radius: 20px;
+      transition: width 0.5s;
+    }
+    /* Navigation */
+    nav {
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #667eea;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #764ba2;
+    }
+    /* Main Content */
+    main {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    section h2 {
+      margin-bottom: 10px;
+      color: #764ba2;
+      border-bottom: 2px solid #667eea;
+      padding-bottom: 5px;
+    }
+    details summary {
+      background: #e0e7ef;
+      padding: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      padding: 8px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background: #f7fafc;
+    }
+    /* Buttons */
+    .complete-btn {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background: #667eea;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .complete-btn:hover {
+      background: #764ba2;
+    }
+    /* Reward Badges */
+    .rewards {
+      margin-top: 10px;
+      padding: 10px;
+      background: #e0e7ef;
+      border-radius: 4px;
+    }
+    .reward-badge {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px;
+      background: #fff;
+      border: 2px solid #667eea;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 46px;
+      font-weight: bold;
+      color: #667eea;
+      transition: background 0.3s, color 0.3s;
+    }
+    .reward-badge.completed {
+      background: #667eea;
+      color: #fff;
+    }
+    /* Footer */
+    footer {
+      background: #667eea;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    /* Daily Task Tracker (Futuristic Feature) */
+    .daily-task {
+      margin: 20px 0;
+      padding: 10px;
+      background: #fff;
+      border: 2px dashed #667eea;
+      border-radius: 8px;
+    }
+    .daily-task h3 {
+      margin-bottom: 10px;
+      color: #764ba2;
+    }
+    .daily-task input[type="checkbox"] {
+      margin-right: 8px;
+    }
+    
+  </style>
+</head>
+<body>
+    <header>
+      <h1>Igniters:Ultimate DSA Sheet</h1>
+      <p>
+        <strong>Guidelines:</strong> Attempt each problem yourself first before reviewing solutions. Difficulty levels:
+        Easy (5–10 mins), Medium (15–20 mins), Hard (40–60 mins). Enjoy the process!
+      </p>
+      
+    </header>
+    <nav>
+      <a href="#arrays">Arrays</a>
+      <a href="#strings">Strings</a>
+      <a href="#2d-arrays">2D Arrays</a>
+      <a href="#searching-sorting">Searching &amp; Sorting</a>
+      <a href="#backtracking">Backtracking</a>
+      <a href="#linked-list">Linked List</a>
+      <a href="#stacks-queues">Stacks &amp; Queues</a>
+      <a href="#greedy">Greedy</a>
+      <a href="#binary-trees">Binary Trees</a>
+      <a href="#bst">BST</a>
+      <a href="#heaps-hashing">Heaps &amp; Hashing</a>
+      <a href="#graphs">Graphs</a>
+      <a href="#tries">Tries</a>
+      <a href="#dp">Dynamic Programming</a>
+      <a href="#bit-manipulation">Bit Manipulation</a>
+      <a href="#segment-trees">Segment Trees</a>
+    </nav>
+    <main>
+      <!-- Daily Task Tracker -->
+      <section id="daily-tasks">
+        <div class="daily-task">
+          <h3>Daily Task Tracker</h3>
+          <p>Mark the problems you solved today:</p>
+          <!-- Example daily tasks list (can be dynamically generated) -->
+          <ul>
+            <li><input type="checkbox" id="task1"> <label for="task1">Solve Any 5 easy problems</label></li>
+            <li><input type="checkbox" id="task2"> <label for="task2">Solve medium 3 problems</label></li>
+            <li><input type="checkbox" id="task3"> <label for="task3">Review one DP question</label></li>
+          </ul>
+        </div>
+      </section>
+  
+      <!-- Section: Arrays -->
+      <section id="arrays">
+        <h2>Chapter 1 : Arrays</h2>
+        <details>
+          <summary>Show/Hide Arrays (26 Questions)</summary>
+          <br>
+          <table>
+            <thead>
+              <tr>
+                <th>Question</th>
+                <th>Companies</th>
+                
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Maximum and Minimum Element in an Array</td>
+                <td>ABCO, Accolite, Amazon, Cisco, Hike, Microsoft, Snapdeal, VMWare, Google, Adobe</td>
+                <td><a href="https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/" target="_blank">View Problem</a></td>
+              </tr>
+              <tr>
+                <td>Reverse the Array</td>
+                <td>Infosys, Moonfrog Labs</td>
+                <td><a href="#" target="_blank">View Problem</a></td>
+              </tr>
+              <tr>
+                <td>Maximum-Subarray</td>
+                <td>Microsoft + Facebook Interview Qs</td>
+                <td><a href="#" target="_blank">View Problem</a></td>
+              </tr>
+              <tr>
+                <td>Contains Duplicate</td>
+                <td>Amazon Interview Qs</td>
+                <td><a href="#" target="_blank">View Problem</a></td>
+              </tr>
+              <tr>
+                <td>Chocolate Distribution Problem</td>
+                <td>Amazon Interview Qs</td>
+                <td><a href="#" target="_blank">View Problem</a></td>
+              </tr>
+              <tr>
+                <td>Search an Element in a Sorted and Pivoted Array</td>
+                <td>Microsoft, Google, Adobe, Amazon, D-E-Shaw, Flipkart, Hike, Intuit, MakeMyTrip, Paytm</td>
+                <td><a href="#" target="_blank">View Problem</a></td>
+              </tr>
+              <tr>
+                <td>Next Permutation</td>
+                <td>Uber + Goldman Sachs + Adobe Interview Qs</td>
+                <td><a href="#" target="_blank">View Problem</a></td>
+              </tr>
+              <tr>
+                <td>Best Time to Buy and Sell Stock</td>
+                <td>Amazon, D-E-Shaw, Directi, Flipkart, Goldman Sachs, Intuit, MakeMyTrip, Microsoft, Ola Cabs, Oracle, Paytm, Pubmatic, Quikr, Salesforce, Sapient, Swiggy, Walmart, Media.net, Google</td>
+                <td><a href="#" target="_blank">View Problem</a></td>
+              </tr>
+              <tr>
+                <td>Repeat and Missing Number Array</td>
+                <td>Amazon Interview Qs</td>
+                <td><a href="#" target="_blank">View Problem</a></td>
+              </tr>
+              <tr>
+                <td>Kth-Largest Element in an Array</td>
+                <td>Amazon, Microsoft, Walmart, Adobe</td>
+                <td><a href="#" target="_blank">View Problem</a></td>
+              </tr>
+              <tr>
+                <td>Trapping Rain Water</td>
+                <td>Samsung Interview Qs</td>
+                <td><a href="#" target="_blank">View Problem</a></td>
+              </tr>
+              <tr>
+                <td>Product of Array Except Self</td>
+                <td>Microsoft + Facebook Interview Qs</td>
+                <td><a href="#" target="_blank">View Problem</a></td>
+              </tr>
+              <tr>
+                <td>Maximum Product Subarray</td>
+                <td>Amazon, D-E-Shaw, Microsoft, Morgan Stanley, OYO Rooms, Google</td>
+                <td><a href="#" target="_blank">View Problem</a></td>
+              </tr>
+              <tr>
+                <td>Find Minimum in Rotated Sorted Array</td>
+                <td>Adobe, Amazon, Microsoft, Morgan Stanley, Samsung, Snapdeal, Times Internet</td>
+                <td><a href="#" target="_blank">View Problem</a></td>
+              </tr>
+              <tr>
+                <td>Search in Rotated Sorted Array</td>
+                <td>Microsoft + Google + Apple Interview Qs</td>
+                <td><a href="#" target="_blank">View Problem</a></td>
+              </tr>
+              <tr>
+                <td>3Sum</td>
+                <td>Adobe, Amazon, Microsoft, Morgan Stanley, Samsung, Snapdeal, Times Internet</td>
+                <td><a href="#" target="_blank">View Problem</a></td>
+              </tr>
+              <tr>
+                <td>Container With Most Water</td>
+                <td>Flipkart + Dunzo Interview Qs</td>
+                <td><a href="#" target="_blank">View Problem</a></td>
+              </tr>
+              <tr>
+                <td>Given Sum Pair</td>
+                <td>Infosys, Amazon, Flipkart Interview Qs</td>
+                <td><a href="#" target="_blank">View Problem</a></td>
+              </tr>
+              <tr>
+                <td>Kth - Smallest Element</td>
+                <td>ABCO, Accolite, Amazon, Cisco, Hike, Microsoft, Snapdeal, VMWare, Google, Adobe</td>
+                <td><a href="#" target="_blank">View Problem</a></td>
+              </tr>
+              <tr>
+                <td>Merge Overlapping Intervals</td>
+                <td>Google Interview Qs</td>
+                <td><a href="#" target="_blank">View Problem</a></td>
+              </tr>
+              <tr>
+                <td>Find Minimum Number of Merge Operations to Make an Array Palindrome</td>
+                <td>Amazon</td>
+                <td><a href="#" target="_blank">View Problem</a></td>
+              </tr>
+              <tr>
+                <td>Arrange Numbers to Form the Biggest Number</td>
+                <td>Barclays Interview Qs</td>
+                <td><a href="#" target="_blank">View Problem</a></td>
+              </tr>
+              <tr>
+                <td>Space Optimization Using Bit Manipulations</td>
+                <td>Amazon</td>
+                <td><a href="#" target="_blank">View Problem</a></td>
+              </tr>
+              <tr>
+                <td>Subarray Sum Divisible K</td>
+                <td>Snapdeal, Microsoft</td>
+                <td><a href="#" target="_blank">View Problem</a></td>
+              </tr>
+              <tr>
+                <td>Print All Possible Combinations of r Elements in a Given Array</td>
+                <td>Amazon</td>
+                <td><a href="#" target="_blank">View Problem</a></td>
+              </tr>
+              <tr>
+                <td>Mo's Algorithm</td>
+                <td>Microsoft</td>
+                <td><a href="#" target="_blank">View Problem</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </details>
+        
+      </section>
+
+      <!-- Section: Strings -->
+<section id="strings">
+  <h2>Strings</h2>
+  <details>
+    <summary>Show/Hide Strings (22 Questions)</summary>
+    <br>
+    <table>
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Companies</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Valid Palindrome</td>
+          <td>Amazon, Cisco, D-E-Shaw, Facebook, FactSet, Morgan Stanley, Paytm, Zoho</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Valid Anagram</td>
+          <td>Nagarro, Media.net, Directi, Google, Adobe, Flipkart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Valid Parentheses</td>
+          <td>Google Interview Qs</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Remove Consecutive Characters</td>
+          <td>Samsung + Adobe</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Longest Common Prefix</td>
+          <td>Adobe + Grofers + Dunzo Interview Qs</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Convert a Sentence into its Equivalent Mobile Numeric Keypad Sequence</td>
+          <td>Adobe</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Print All the Duplicates in the Input String</td>
+          <td>Ola + Amdocs IQ</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Longest Substring without Repeating Characters</td>
+          <td>Morgan Stanley + Amazon IQ</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Longest Repeating Character Replacement</td>
+          <td>Amazon, Google</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Group Anagrams</td>
+          <td>Samsung + Adobe + Amazon Interview Qs</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Longest Palindromic Substring</td>
+          <td>Microsoft + Google + Samsung + Visa IQ</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Palindromic Substrings</td>
+          <td>Microsoft IQ</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Next Permutation</td>
+          <td>Adobe + Goldman Sachs + Uber</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Count Palindromic Subsequences</td>
+          <td>Myntra Interview Qs</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Smallest Window in a String Containing All Characters of Another String</td>
+          <td>Microsoft + Amazon IQ</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Wildcard String Matching</td>
+          <td>Microsoft + Amazon + Ola IQ</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Longest Prefix Suffix</td>
+          <td>Flipkart + Swiggy IQ</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Rabin-Karp Algorithm for Pattern Searching</td>
+          <td>Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Transform One String to Another using Minimum Number of Operations</td>
+          <td>Directi</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Minimum Window Substring</td>
+          <td>Amazon, Google, MakeMyTrip, Streamoid Technologies, Microsoft, Media.net, Atlassian, Flipkart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Boyer Moore Algorithm for Pattern Searching</td>
+          <td>Amdocs</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Word Wrap</td>
+          <td>Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </details>
+</section>
+
+<!-- Section: 2D Arrays -->
+<section id="2d-arrays">
+  <h2>2D Arrays</h2>
+  <details>
+    <summary>Show/Hide 2D Arrays (10 Questions)</summary>
+    <br>
+    <table>
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Companies</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Zigzag (or Diagonal) Traversal of Matrix</td>
+          <td>Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Set Matrix Zeroes</td>
+          <td>Amazon, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Spiral Matrix</td>
+          <td>Flipkart + Apple + Societe Generale IQ</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Rotate Image</td>
+          <td>Microsoft, Paytm, Samsung, Adobe</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Word Search</td>
+          <td>Google + Ola + Goldman Sachs IQ</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Find the Number of Islands (Using DFS)</td>
+          <td>Microsoft + Uber + Apple + Amazon IQ</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Replace 'O' with 'X' if Surrounded by 'X'</td>
+          <td>Google</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Find a Common Element in all Rows of a Row-Wise Sorted Matrix</td>
+          <td>MAQ Software, Microsoft, VMWare</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Create a Matrix with Alternating Rectangles of O and X</td>
+          <td>MAQ, VMWare</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Maximum Size Rectangle of all 1s</td>
+          <td>Amazon, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </details>
+</section>
+
+<!-- Section: Searching & Sorting -->
+<section id="searching-sorting">
+  <h2>Searching &amp; Sorting</h2>
+  <details>
+    <summary>Show/Hide Searching &amp; Sorting (23 Questions)</summary>
+    <br>
+    <table>
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Companies</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Permute Two Arrays such that Sum of Every Pair is ≥ K</td>
+          <td>Samsung</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Counting Sort</td>
+          <td>Samsung, Morgan Stanley, Snapdeal, EPAM Systems</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Find Common Elements in Three Sorted Arrays</td>
+          <td>MAQ Software, Microsoft, VMWare</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Search in an Array where Adjacent Elements Differ by at Most k</td>
+          <td>TCS, Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Ceiling in a Sorted Array</td>
+          <td>TCS</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Pair with Given Difference</td>
+          <td>Amazon, Visa</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Majority Element</td>
+          <td>Amazon, Google</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Count Triplets with Sum Smaller Than a Given Value</td>
+          <td>Amazon, SAP Labs</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Maximum Sum Subsequence with No Adjacent Elements</td>
+          <td>Amazon, FactSet, Oxigen Wallet, OYO Rooms, Paytm, Walmart, Yahoo, Adobe, Flipkart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Merge Sorted Arrays using O(1) Space</td>
+          <td>Amdocs, Brocade, Goldman Sachs, Juniper Networks, Linkedin, Microsoft, Quikr, Snapdeal, Synopsys, Zoho, Adobe</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Inversion of Array</td>
+          <td>Adobe, Amazon, BankBazaar, Flipkart, Microsoft, Myntra, MakeMyTrip</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Find Duplicates in O(n) Time and O(1) Extra Space</td>
+          <td>Amazon, D-E-Shaw, Flipkart, Paytm, Qualcomm, Zoho</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Radix Sort</td>
+          <td>Amazon, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Product of Array Except Itself</td>
+          <td>Accolite, Amazon, D-E-Shaw, Intuit, Morgan Stanley, Opera, Microsoft, Flipkart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Make All Array Elements Equal</td>
+          <td>Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Check if Reversing a Subarray Makes the Array Sorted</td>
+          <td>Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Find Four Elements that Sum to a Given Value</td>
+          <td>Adobe, Amazon, Google, Microsoft, OYO Rooms</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Median of Two Sorted Arrays with Different Sizes</td>
+          <td>Amazon, Samsung, Microsoft, Google</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Median of a Stream of Integers</td>
+          <td>Amazon, Google</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Print Subarrays with 0 Sum</td>
+          <td>Paytm, Adobe</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Aggressive Cows</td>
+          <td>Adobe</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Allocate Minimum Number of Pages</td>
+          <td>Google, Infosys, Codenation, Amazon, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Minimum Swaps to Sort</td>
+          <td>Amazon, Google</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </details>
+</section>
+
+<!-- Section: Backtracking -->
+<section id="backtracking">
+  <h2>Backtracking</h2>
+  <details>
+    <summary>Show/Hide Backtracking (21 Questions)</summary>
+    <br>
+    <table>
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Companies</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Rat in a Maze (Backtracking Set 2)</td>
+          <td>Microsoft, Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Combinational Sum</td>
+          <td>Adobe, Amazon, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Crossword-Puzzle</td>
+          <td>Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Longest Possible Route in a Matrix with Hurdles</td>
+          <td>Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Printing All Solutions in N-Queen Problem</td>
+          <td>Accolite, Amazon, Amdocs, D-E-Shaw, MAQ Software, Twitter, Visa, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Solve the Sudoku</td>
+          <td>Amazon, Directi, Flipkart, MakeMyTrip, MAQ Software, Microsoft, Ola Cabs, Oracle, PayPal, Zoho</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Partition Equal Subset Sum</td>
+          <td>Amazon, Adobe, Accolite, Traveloka</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>M Coloring Problem</td>
+          <td>Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Knight Tour</td>
+          <td>IBM</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Soduko</td>
+          <td>Amazon, Adobe, Accolite, Traveloka</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Remove Invalid Parentheses</td>
+          <td>Uber</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Word Break Problem using Backtracking</td>
+          <td></td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Print All Palindromic Partitions of a String</td>
+          <td>Facebook, Amazon, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Find Shortest Safe Route in a Maze with Landmines</td>
+          <td>Facebook, Amazon, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Partition of Set into K Subsets with Equal Sum</td>
+          <td>Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Hamiltonian Cycle (Backtracking Set-7)</td>
+          <td>Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Tug-of-War</td>
+          <td>Google</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Maximum Possible Number by doing at most K Swaps</td>
+          <td>Amazon, Adobe, Accolite, Traveloka</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Cryptarithmetic Puzzle (Backtracking Set-8)</td>
+          <td>Goldman Sachs</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Find Paths from Corner Cell to Middle Cell in a Maze</td>
+          <td>Meta</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Arithmetic Expressions</td>
+          <td>Flipkart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </details>
+</section>
+
+<!-- Section: Linked List -->
+<section id="linked-list">
+  <h2>Linked List</h2>
+  <details>
+    <summary>Show/Hide Linked List (26 Questions)</summary>
+    <br>
+    <table>
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Companies</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Reverse Linked List</td>
+          <td>Sprinklr</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Linked List Cycle</td>
+          <td>Accolite, Amazon, D-E-Shaw, Hike, Lybrate, Mahindra, Comviva, MakeMyTrip, MAQ Software, OYO Rooms, Paytm, Qualcomm, Samsung, SAP Labs, Snapdeal, Veritas, VMWare, Walmart, Adobe</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Merge Two Sorted Lists</td>
+          <td>Accolite, Amazon, Belzabar, Brocade, FactSet, Flipkart, MakeMyTrip, Microsoft, OATS Systems, Oracle, Samsung, Synopsys, Zoho</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Delete without Head Node</td>
+          <td>Amazon, Goldman Sachs, Kritikal Solutions, Microsoft, Samsung, Visa</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Remove Duplicates from an Unsorted Linked List</td>
+          <td>Amazon, Intuit</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Sort a Linked List of 0s-1s-2s</td>
+          <td>Microsoft, Amazon, MakeMyTrip</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Multiply Two Numbers Represented as Linked Lists</td>
+          <td>Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Remove Nth Node from End of List</td>
+          <td>Accolite, Adobe, Amazon, Citicorp, Epic Systems, FactSet, Hike, MAQ Software, Monotype Solutions, Morgan Stanley, OYO Rooms, Qualcomm, Samsung, Snapdeal, Flipkart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Reorder List</td>
+          <td>Amazon, Microsoft, OYO Rooms, Intuit</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Detect and Remove Loop in a Linked List</td>
+          <td>Accolite, Amazon, D-E-Shaw, Hike, Lybrate, Mahindra, Comviva, MakeMyTrip, MAQ Software, OYO Rooms, Paytm, Qualcomm, Samsung, SAP Labs, Snapdeal, Veritas, VMWare, Walmart, Adobe</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Intersection Point of Two Linked Lists</td>
+          <td>Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Flatten a Linked List with Next and Child Pointers</td>
+          <td>Google</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Linked List in Zig-Zag Fashion</td>
+          <td>Micorsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Reverse a Doubly Linked List</td>
+          <td>Walmart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Delete Nodes Having a Greater Value on the Right Side</td>
+          <td>Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Segregate Even and Odd Elements in a Linked List</td>
+          <td>Walmart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Point to Next Higher Value Node (with Arbitrary Pointer)</td>
+          <td>GeekyAnts</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Rearrange a Given Linked List In-Place</td>
+          <td>Ola, Uber</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Sort Bitonic Doubly Linked List</td>
+          <td>Morgan Stanley</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Merge K Sorted Lists</td>
+          <td>Microsoft, Ola, eBay</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Merge Sort for Linked List</td>
+          <td>Accolite, Adobe, Amazon, MAQ Software, Microsoft, Paytm, Veritas</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Quicksort on Singly-Linked List</td>
+          <td>Paytm</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Sum of Two Linked Lists</td>
+          <td>Accolite, Amazon, Flipkart, MakeMyTrip, Microsoft, Morgan Stanley, Qualcomm, Snapdeal</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Flattening a Linked List</td>
+          <td>24*7 Innovation Labs, Amazon, Drishti-Soft, Flipkart, Goldman Sachs, Microsoft, Paytm, Payu, Qualcomm, Snapdeal, Visa</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Clone a Linked List with Next and Random Pointer</td>
+          <td>Triology</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Subtract Two Numbers Represented as Linked Lists</td>
+          <td>Amazon, Goldman Sachs</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </details>
+</section>
+
+<!-- Section: Stacks & Queues -->
+<section id="stacks-queues">
+  <h2>Stacks &amp; Queues</h2>
+  <details>
+    <summary>Show/Hide Stacks &amp; Queues (27 Questions)</summary>
+    <br>
+    <table>
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Companies</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Implement Two Stacks in an Array</td>
+          <td>24*7 Innovation Labs, Microsoft, Samsung, Snapdeal</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Evaluation of Postfix Expression</td>
+          <td>Amazon, Google, Facebook</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Implement Stack using Queues</td>
+          <td>Facebook</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Queue Reversal</td>
+          <td>Amazon, Morgan Stanley</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Implement Stack &amp; Queue using Deque</td>
+          <td>Microsoft, Atlassian</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Reverse First k Elements of a Queue</td>
+          <td>Microsoft, Amdocs</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Design Stack with Middle Operation</td>
+          <td>MAQ Software</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Infix to Postfix</td>
+          <td>Amazon, Samsung, Paytm, Vmware Inc.</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Design and Implement Special Stack</td>
+          <td>Amazon, Google, Microsoft, Visa, Goldman Sachs</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Longest Valid String</td>
+          <td>Google, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Check for Duplicate Parentheses in Expression</td>
+          <td>Flipkart, Oracle, OYO Rooms, Snapdeal, Walmart, Yatra.com, Microsoft, Google</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Stack Permutations Check</td>
+          <td>Visa</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Count Natural Numbers whose Permutation is Greater</td>
+          <td>Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Sort a Stack Using Recursion</td>
+          <td>Amazon, Goldman Sachs, IBM, Intuit, Kuliza, Yahoo, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Queue-based Approach for First Non-Repeating Character</td>
+          <td>Microsoft, Flipkart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>The Celebrity Problem</td>
+          <td>Google, Visa, Apple</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Next Larger Element</td>
+          <td>Visa</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Distance of Nearest Cell</td>
+          <td>Flipkart, Facebook</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Rotten Oranges</td>
+          <td>Facebook</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Next Smaller Element</td>
+          <td>Codenation</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Circular Tour</td>
+          <td>Codenation, Flipkart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Efficiently Implement k-Stacks in a Single Array</td>
+          <td>Flipkart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>The Celebrity Problem (Duplicate)</td>
+          <td>Google, Visa, Apple</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Iterative Tower of Hanoi</td>
+          <td>Microsoft, Flipkart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Maximum of Minimums for Every Window Size</td>
+          <td>Amazon, Microsoft, Flipkart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>LRU Cache Implementation</td>
+          <td>Microsoft, Uber, Alibaba</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Find a Tour that Visits All Stations</td>
+          <td>Uber</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </details>
+</section>
+
+<!-- Section: Greedy -->
+<section id="greedy">
+  <h2>Greedy</h2>
+  <details>
+    <summary>Show/Hide Greedy (22 Questions)</summary>
+    <br>
+    <table>
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Companies</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Activity Selection Problem (Greedy)</td>
+          <td>Facebook, Morgan Stanley, Flipkart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Greedy Algorithm to Find Minimum Number of Coins</td>
+          <td>Accolite, Amazon, Morgan Stanley, Oracle, Paytm, Samsung, Snapdeal, Synopsys, Visa, Microsoft, Google</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Minimum Sum: Two Numbers Formed from Digits (Array-2)</td>
+          <td>Google</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Minimum Sum Absolute Difference between Pairs in Two Arrays</td>
+          <td>Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Find Maximum Height Pyramid from Given Array of Objects</td>
+          <td>Flipkart, Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Minimum Cost for Acquiring All Coins with k Extra Coins per Coin</td>
+          <td></td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Find Maximum Equal Sum of Three Stacks</td>
+          <td>Microsoft, Amazon, Flipkart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Job Sequencing Problem</td>
+          <td>Microsoft, Accolite</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Greedy Algorithm for Egyptian Fraction</td>
+          <td></td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Fractional Knapsack Problem</td>
+          <td>Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Maximum Length Chain of Pairs</td>
+          <td>Amazon, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Find Smallest Number with Given Number of Digits and Digit Sum</td>
+          <td>MAQ Software, OYO Rooms</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Maximize Sum of Consecutive Differences in a Circular Array</td>
+          <td>Maccafe</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Paper-Cut: Minimum Number of Squares</td>
+          <td>Google</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Lexicographically Smallest Array with k Consecutive Swaps</td>
+          <td>Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>CHOCOLA Problems</td>
+          <td>Flipkart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Find Minimum Time to Finish All Jobs with Constraints</td>
+          <td></td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Job Sequencing using Disjoint Set Union</td>
+          <td>Samsung</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Rearrange Characters so that No Two Adjacent are the Same</td>
+          <td>Amazon, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Minimum Edges to Reverse to Make a Path</td>
+          <td></td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Minimize Cash Flow Among Friends</td>
+          <td></td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Minimum Cost to Cut a Board into Squares</td>
+          <td>Maccafe</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </details>
+</section>
+
+<!-- Section: Binary Trees -->
+<section id="binary-trees">
+  <h2>Binary Trees</h2>
+  <details>
+    <summary>Show/Hide Binary Trees (33 Questions)</summary>
+    <br>
+    <table>
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Companies</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Maximum Depth of Binary Tree</td>
+          <td>Amazon, Cadence India, CouponDunia, D-E-Shaw, FactSet, FreeCharge, MakeMyTrip</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Reverse Level Order Traversal</td>
+          <td>Amazon, Microsoft, Flipkart, Adobe</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Subtree of Another Tree</td>
+          <td>Amazon, Microsoft, Facebook</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Invert Binary Tree</td>
+          <td>Amazon, Hike</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Binary Tree Level Order Traversal</td>
+          <td>Accolite, Adobe, Amazon, Cisco, D-E-Shaw, Flipkart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Left View of Binary Tree</td>
+          <td>Microsoft, Adobe, Cisco Networking Academy</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Right View of Binary Tree</td>
+          <td>Amdocs</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>ZigZag Tree Traversal</td>
+          <td>Amazon, Cisco, FactSet, Hike, Snapdeal, Walmart, Microsoft, Flipkart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Create a Mirror Tree from a Given Binary Tree</td>
+          <td>Accolite, Adobe, Amazon, Belzabar, eBay, Goldman Sachs, Microsoft, Morgan Stanley, Myntra, Ola Cabs, Paytm</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Leaf at Same Level</td>
+          <td>Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Check for Balanced Tree</td>
+          <td>Amazon, Walmart, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Transform to Sum Tree</td>
+          <td>Amazon, FactSet, Microsoft, Samsung, Walmart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Check if Tree is Isomorphic</td>
+          <td>Amazon, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Same Tree</td>
+          <td>Amazon, Microsoft, Flipkart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Construct Binary Tree from Preorder and Inorder Traversal</td>
+          <td>Accolite, Amazon, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Height of Binary Tree</td>
+          <td>Amazon, Cadence India, CouponDunia, D-E-Shaw, FactSet, FreeCharge, MakeMyTrip</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Diameter of a Binary Tree</td>
+          <td>Amazon, Microsoft, OYO Rooms</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Top View of Binary Tree</td>
+          <td>Microsoft, Adobe, Expedia Group</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Bottom View of Binary Tree</td>
+          <td>D-E-Shaw India</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Diagonal Traversal of Binary Tree</td>
+          <td>Amazon, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Boundary Traversal of Binary Tree</td>
+          <td>Accolite, Amazon, FactSet, Hike, Kritikal Solutions</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Construct Binary Tree from String with Brackets</td>
+          <td>Microsoft, Morgan Stanley, OYO Rooms, Payu, Samsung, Flipkart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Minimum Swaps to Convert Binary Tree to BST</td>
+          <td>Adobe, Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Duplicate Subtree in Binary Tree</td>
+          <td>Google</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Check if a Given Graph is a Tree or Not</td>
+          <td>Microsoft, Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Lowest Common Ancestor in a Binary Tree</td>
+          <td>Accolite, Amazon, American Express, Cisco, Expedia, Flipkart, MakeMyTrip, Microsoft, OYO Rooms</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Min Distance between Two Nodes in a Binary Tree</td>
+          <td>Amazon, Linkedin, MakeMyTrip, Ola Cabs, Qualcomm, Samsung</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Duplicate Subtrees</td>
+          <td>Ola</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Kth Ancestor of a Node in Binary Tree</td>
+          <td>Josh Technology Group</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Binary Tree Maximum Path Sum</td>
+          <td>Samsung, Facebook</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Serialize and Deserialize Binary Tree</td>
+          <td>Flipkart, InMobi, Linkedin, MAQ Software, Microsoft, Paytm, Quikr, Yahoo</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Convert Binary Tree to DLL</td>
+          <td>Accolite, Amazon, Goldman Sachs, Microsoft, Morgan Stanley, Salesforce, Snapdeal</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Print All k-Sum Paths in a Binary Tree</td>
+          <td>Accolite, Amazon, Goldman Sachs</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </details>
+</section>
+
+<!-- Section: Binary Search Trees -->
+<section id="bst">
+  <h2>Binary Search Trees</h2>
+  <details>
+    <summary>Show/Hide Binary Search Trees (21 Questions)</summary>
+    <br>
+    <table>
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Companies</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lowest Common Ancestor of a BST</td>
+          <td>Accolite, Amazon, Flipkart, MAQ Software, Microsoft, Samsung, Synopsys</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>BST Set 1 (Search and Insertion)</td>
+          <td>Accolite, Amazon, Microsoft, Paytm, Samsung</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Minimum Element in BST</td>
+          <td>Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Predecessor and Successor</td>
+          <td>Google, Adobe, Goldman Sachs, Direct</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Check Whether BST Contains Dead End</td>
+          <td>Walmart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Convert Binary Tree to BST</td>
+          <td>HSBC</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Kth Largest Element in BST</td>
+          <td>Accolite, Amazon, Samsung, SAP Labs, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Validate BST</td>
+          <td>OYO Rooms, Qualcomm, Samsung, Snapdeal, VMWare, Walmart, Wooker</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Kth Smallest Element in a BST</td>
+          <td>Accolite, Amazon, Google</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Delete Node in a BST</td>
+          <td>Delete Node in a BST</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Flatten BST to Sorted List</td>
+          <td>Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Preorder to Postorder</td>
+          <td>Amazon, Linkedin, Flipkart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Count BST Nodes in a Given Range</td>
+          <td>D-E-Shaw, Google</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Populate Inorder Successor for all Nodes</td>
+          <td>Sap Labs</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Convert Normal BST to Balanced BST</td>
+          <td>Paytm</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Merge Two BSTs</td>
+          <td>D-E-Shaw India</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Find Conflicting Appointments (n appointments)</td>
+          <td>Samsung</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Replace Every Element in BST</td>
+          <td>Samsung</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Construct BST from Given Preorder Traversal</td>
+          <td>Adobe, Morgan Stanley, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Find Median of BST in O(n) Time &amp; O(1) Space</td>
+          <td>Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Largest BST in a Binary Tree</td>
+          <td>Amazon, D-E-Shaw, Samsung, Microsoft, Flipkart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </details>
+</section>
+<!-- Section: Heaps & Hashing -->
+<section id="heaps-hashing">
+  <h2>Heaps &amp; Hashing</h2>
+  <details>
+    <summary>Show/Hide Heaps &amp; Hashing (28 Questions)</summary>
+    <br>
+    <table>
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Companies</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Choose k Array Elements such that Difference of Max and Min is Minimized</td>
+          <td></td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Heap Sort</td>
+          <td>Adobe</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Top K Frequent Elements</td>
+          <td>Amazon, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>k Largest Elements in an Array</td>
+          <td>Amazon, Microsoft, Walmart, Adobe</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Next Greater Element</td>
+          <td>Amazon, Microsoft, Flipkart, Adobe</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>K’th Smallest/Largest Element in Unsorted Array</td>
+          <td>ABCO, Accolite, Amazon, Cisco, Hike, Microsoft, Snapdeal, VMWare, Google, Adobe</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Find Maximum Repeating Number in O(n) Time and O(1) Extra Space</td>
+          <td>Accolite, Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>K-th Smallest Element After Removing Some Integers from Natural Numbers</td>
+          <td>ABCO, Accolite, Amazon, Cisco, Hike, Microsoft, Snapdeal, VMWare, Google, Adobe</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Find k Closest Elements to a Given Value</td>
+          <td>Amazon, OYO Rooms</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>K’th Largest Element in a Stream</td>
+          <td>Amazon, Cisco, Hike, OYO Rooms, Walmart, Microsoft, Flipkart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Connect Ropes</td>
+          <td>Amazoon, Oyo, Goldman Sachs</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Cuckoo Hashing</td>
+          <td>Amaxon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Itinerary from a List of Tickets</td>
+          <td>Microsoft, Ola, eBay</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Largest Subarray with 0 Sum</td>
+          <td>Amazon, MakeMyTrip, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Count Distinct Elements in Every Window of Size k</td>
+          <td>Accolite, Amazon, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Group Shifted Strings</td>
+          <td>Oracle</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Merge K Sorted Lists</td>
+          <td>Microsoft, Ola, eBay</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Find Median from Data Stream</td>
+          <td>Adobe, Amazon, Apple, Belzabar, D-E-Shaw, Facebook, Flipkart, Google, Intuit, Microsoft, Morgan Stanley, Ola Cabs, Oracle, Samsung, SAP Labs, Yahoo</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Sliding Window Maximum</td>
+          <td>Amazon, Directi, Flipkart, Microsoft, Google</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Find the Smallest Positive Number</td>
+          <td>Accolite, Amazon, Samsung, Snapdeal</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Find Surpasser Count for Each Element in an Array</td>
+          <td>Amazon, Morgan Stanley, Ola Cabs, SAP Labs</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Tournament Tree and Binary Heap</td>
+          <td>Amazon, Ola Cabs, Samsung, Synopsys, Walmart, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Check for Palindrome (in an Array)</td>
+          <td>Amazon, Cisco, D-E-Shaw, Facebook, FactSet, Morgan Stanley, Paytm, Zoho</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Length of Largest Subarray with Contiguous Elements</td>
+          <td>Amazon, Intuit, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Palindrome Substring Queries</td>
+          <td>Amazon, Morgan Stanley, Ola Cabs, SAP Labs</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Subarray Distinct Elements</td>
+          <td>Microsoft, Ola, eBay</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Find the Recurring Function</td>
+          <td>MAQ Software</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>K Maximum Sum Combinations from Two Arrays</td>
+          <td>Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </details>
+</section>
+<!-- Section: Graphs -->
+<section id="graphs">
+  <h2>Graphs</h2>
+  <details>
+    <summary>Show/Hide Graphs (40 Questions)</summary>
+    <br>
+    <table>
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Companies</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>BFS</td>
+          <td>Samsung, Delhivery, SAP Labs</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>DFS</td>
+          <td>Samsung, Intuit, Goldman Sachs</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Flood Fill Algorithm</td>
+          <td>Google, Adobe, Apple</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Number of Triangles</td>
+          <td>IBM</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Detect Cycle in a Graph</td>
+          <td>Lenksart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Detect Cycle in an Undirected Graph</td>
+          <td>Samsung</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Rat in a Maze Problem</td>
+          <td>Sharechat, Directi</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Steps by Knight</td>
+          <td>Samsung</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Clone Graph</td>
+          <td>Google, MAQ Software, Apple, Facebook</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Number of Operations to Make Network Connected</td>
+          <td>Samsung</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Dijkstra’s Shortest Path Algorithm</td>
+          <td>Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Topological Sort</td>
+          <td>Amazon, Google, Flipkart, Oyo, Fipkart, Samsung</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Oliver and the Game</td>
+          <td>Sharechat, Directi</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Minimum Time for Each Job in a DAG</td>
+          <td>Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Check if All Tasks Can be Finished (Dependencies)</td>
+          <td>Directi, Sharechat</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Find the Number of Islands</td>
+          <td>Razorpay</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Prim's Algorithm</td>
+          <td>Visa</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Negative Weighted Cycle</td>
+          <td>Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Floyd Warshall</td>
+          <td>Google, Uber</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Graph Coloring</td>
+          <td>Morgan Stanley</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Snakes and Ladders</td>
+          <td>Goldman Sachs, Makemytrip</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Kosaraju's Theorem</td>
+          <td>Paytm</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Journey to the Moon</td>
+          <td>Lenksart, Payload</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Vertex Cover</td>
+          <td>Intuit</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>M Coloring Problem</td>
+          <td>Uber</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Cheapest Flights Within K Stops</td>
+          <td>Uber, Paypal</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Find if There is a Path > k Length from a Source</td>
+          <td>Cisco, Intuit</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Bellman Ford</td>
+          <td>Sharechat, Directi</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Bipartite Graph</td>
+          <td>Microsoft, Flipkart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Word-Ladder</td>
+          <td>Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Allen Dictionary</td>
+          <td>Samsung</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Kruskals MST</td>
+          <td>Amazon, Cisco, Samsung</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Total Number of Spanning Trees</td>
+          <td>Amazon, Cisco, Samsung, Microsoft, Flipkart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Travelling Salesman</td>
+          <td>Google, Microsoft, Opera</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Find Longest Path in a DAG</td>
+          <td>Google</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Two Clique Problem</td>
+          <td>Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Minimize Cash Flow</td>
+          <td>Intuit, Uber</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Chinese Postman</td>
+          <td>Intuit</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Water Jug</td>
+          <td>Intuit, Uber</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Water Jug 2</td>
+          <td>MakeMyTrip, MAQ Software</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </details>
+</section>
+<!-- Section: Tries -->
+<section id="tries">
+  <h2>Tries</h2>
+  <details>
+    <summary>Show/Hide Tries (6 Questions)</summary>
+    <br>
+    <table>
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Companies</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Construct a Trie from Scratch</td>
+          <td>Accolite, Amazon, D-E-Shaw, FactSet, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Print Unique Rows in a Boolean Matrix</td>
+          <td>Amazon, Zoho</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Word Break Problem (Trie Solution)</td>
+          <td>Amazon, Google, Hike, IBM, MAQ Software, Microsoft, Walmart, Zoho</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Given a Sequence of Words, Print All Anagrams Together</td>
+          <td>Amazon, D-E-Shaw, Goldman Sachs, Morgan Stanley, Snapdeal, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Find Shortest Unique Prefix for Every Word</td>
+          <td>Microsoft, Google</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Implement a Phone Directory</td>
+          <td>Amazon, Microsoft, Snapdeal</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </details>
+</section>
+<!-- Section: Dynamic Programming -->
+<section id="dp">
+  <h2>Dynamic Programming (DP)</h2>
+  <details>
+    <summary>Show/Hide DP (54 Questions)</summary>
+    <br>
+    <table>
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Companies</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Knapsack with Duplicate Items</td>
+          <td>Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>BBT Counter</td>
+          <td>Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Reach a Given Score</td>
+          <td>Samsung</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Maximum Difference of Zeros and Ones in a Binary String</td>
+          <td>Ola</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Climbing Stairs</td>
+          <td>Intuit</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Permutation Coefficient</td>
+          <td>Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Longest Repeating Subsequence</td>
+          <td>Google, Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Pairs with Specific Difference</td>
+          <td>Ola</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Longest Subsequence-1</td>
+          <td>Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Coin Change</td>
+          <td>Microsoft, Samsung, Barclays, Apple, Adobe</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Longest Increasing Subsequence (LIS)</td>
+          <td>Amazon, Google, Facebook, Fidelity International</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Longest Common Subsequence</td>
+          <td>Siemens, Amazon, Google</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Word Break</td>
+          <td>Amazon, Google, Microsoft, Walmart, Apple, IBM</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Combination Sum IV</td>
+          <td>Adobe, Amazon, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>House Robber</td>
+          <td>Apple, Uber</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>House Robber 2</td>
+          <td>Arrays Dynamic Programming</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Decode Ways</td>
+          <td>Adobe, Uber</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Unique Paths</td>
+          <td>Google, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Jumps Game</td>
+          <td>Facebook, Amazon, Microsoft, Google</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Knapsack Problem</td>
+          <td>Amazon, Directi, Flipkart, GreyOrange, Microsoft, Mobicip, Morgan Stanley, Oracle, Payu, Snapdeal, Visa</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>nCr</td>
+          <td>Google</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Catalan Number</td>
+          <td>Amazon, Google</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Edit Distance</td>
+          <td>Google, Goldman Sachs, Citrix</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Subset Sum</td>
+          <td>Amazon, Google</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Gold Mine</td>
+          <td>Samsung</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Assembly Line Scheduling</td>
+          <td>Goldman Sachs</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Maximize the Cut Segments</td>
+          <td>Amazon, OYO Rooms, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Maximum Sum Increasing Subsequence</td>
+          <td>Amazon, Morgan Stanley, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Count All Subsequences with Product Less Than K</td>
+          <td>Goldman Sachs</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Egg Dropping Puzzle</td>
+          <td>Amazon, D-E-Shaw, Goldman Sachs, Google, Hike, MakeMyTrip, MAQ Software, Myntra, Nearbuy, Opera, Oracle, Philips, Samsung, Service Now, Unisys, VMWare, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Max Length Chain</td>
+          <td>Amazon, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Largest Square in Matrix</td>
+          <td>Amazon, Samsung</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Maximum Path Sum</td>
+          <td>Amazon, Microsoft, Oyo, Directi</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Minimum Number of Jumps</td>
+          <td>Adobe, Amazon, Housing.com, Moonfrog Labs, Walmart, Microsoft, Google, Flipkart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Minimum Removals from Array to Make (max – min) ≤ K</td>
+          <td>Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Longest Common Substring</td>
+          <td>Webarch Club</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Partition Equal Subset Sum</td>
+          <td>Amazon, Accolite, Traveloca, Adobe</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Longest Palindromic Subsequence</td>
+          <td>Amazon, Google</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Count Palindromic Subsequences</td>
+          <td>Myntra</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Longest Palindromic Substring</td>
+          <td>Amazon, Microsoft, Samsung, Visa</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Longest Alternating Sequence</td>
+          <td>Ola</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Weighted Job Scheduling</td>
+          <td>Intuit</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Coin Game</td>
+          <td>Salesforce</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Coin Game Winner</td>
+          <td>Ola</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Optimal Strategy for a Game</td>
+          <td>Google, IBM</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Word Wrap</td>
+          <td>Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Mobile Numeric Keypad</td>
+          <td>Amazon, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Maximum Length of Pair Chain</td>
+          <td>Amazon, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Matrix Chain Multiplication</td>
+          <td>Walmart, Flipkart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Maximum Profit by Buying and Selling a Share at Most Twice</td>
+          <td>Accolite, Amazon, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Optimal BST</td>
+          <td>Google</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Largest Submatrix with Sum 0</td>
+          <td>Amazon, MakeMyTrip, Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Largest Area Rectangular Sub-matrix with Equal Number of 1’s and 0’s</td>
+          <td>Amazon, Directi, Intuit, MakeMyTrip, Microsoft, Samsung, Google, Flipkart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </details>
+</section>
+<!-- Section: Bit Manipulation -->
+<section id="bit-manipulation">
+  <h2>Bit Manipulation</h2>
+  <details>
+    <summary>Show/Hide Bit Manipulation (10 Questions)</summary>
+    <br>
+    <table>
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Companies</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Count Set Bits in an Integer</td>
+          <td>Adobe, Apple</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Find Two Non-Repeating Elements in an Array</td>
+          <td>Accolite, Amazon, FactSet, Google, MakeMyTrip, Microsoft, Qualcomm, Samsung</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Check if a Number is a Power of Two</td>
+          <td>Adobe</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Find Position of the Only Set Bit</td>
+          <td>Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Count Bits to be Flipped to Convert A to B</td>
+          <td>Maq Software</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Count Total Set Bits from 1 to n</td>
+          <td>Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Copy Set Bits in a Range</td>
+          <td>Facebook</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Calculate Square without Using *, /, and pow()</td>
+          <td>Amazon</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Divide Two Integers without Multiplication, Division, or Mod</td>
+          <td>Microsoft</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Power Set</td>
+          <td>Google, Adobe, Paytm</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </details>
+</section>
+<!-- Section: Segment Trees -->
+<section id="segment-trees">
+  <h2>Segment Trees</h2>
+  <details>
+    <summary>Show/Hide Segment Trees (6 Questions)</summary>
+    <br>
+    <table>
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Companies</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Range Sum Query - Immutable</td>
+          <td></td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Range Minimum Query</td>
+          <td>Google Interview Qs</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Range Sum Query - Mutable</td>
+          <td>Alibaba</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Create Sorted Array through Instructions</td>
+          <td>Samsung, Accolite</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Count of Range Sum</td>
+          <td>Walmart</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+        <tr>
+          <td>Count of Smaller Numbers After Self</td>
+          <td>Codenation, Google</td>
+          <td><a href="#" target="_blank">View Problem</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </details>
+</section>
+
+            </tbody>
+          </table>
+        </details>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; Igniters: 2025 Ultimate DSA Sheet. Happy Problem Solving!</p>
+    </footer>
+    <script>
+        // List all section IDs (ensure these match the id attributes in your sections)
+        const sections = [
+          'arrays', 'strings', '2d-arrays', 'searching-sorting',
+          'backtracking', 'linked-list', 'stacks-queues', 'greedy',
+          'binary-trees', 'bst', 'heaps-hashing', 'graphs',
+          'tries', 'dp', 'bit-manipulation', 'segment-trees'
+        ];
+    
+        // Load completed sections from localStorage (if any)
+        let completedSections = JSON.parse(localStorage.getItem('completedSections')) || {};
+    
+        // Function to update the progress bar and text
+        function updateProgress() {
+          const completedCount = Object.keys(completedSections).length;
+          const total = sections.length;
+          const percent = Math.round((completedCount / total) * 100);
+          document.getElementById('progressBar').style.width = percent + '%';
+          document.getElementById('progressText').innerText = percent + '% Completed';
+        }
+    
+        // Function to mark a section as complete and award a badge
+        function markSectionComplete(sectionId) {
+          if (!completedSections[sectionId]) {
+            completedSections[sectionId] = true;
+            localStorage.setItem('completedSections', JSON.stringify(completedSections));
+            // Show reward badge for this section
+            const rewardDiv = document.getElementById('reward-' + sectionId);
+            const badge = document.createElement('div');
+            badge.classList.add('reward-badge', 'completed');
+            badge.innerText = '🏆';
+            rewardDiv.appendChild(badge);
+            alert('Section "' + sectionId + '" marked as complete! You earned a reward badge!');
+            updateProgress();
+          } else {
+            alert('Section already marked as complete!');
+          }
+        }
+    
+        // On page load, check for already completed sections and update UI
+        window.onload = function() {
+          sections.forEach(sectionId => {
+            if (completedSections[sectionId]) {
+              const rewardDiv = document.getElementById('reward-' + sectionId);
+              if (rewardDiv && rewardDiv.children.length === 0) {
+                const badge = document.createElement('div');
+                badge.classList.add('reward-badge', 'completed');
+                badge.innerText = '🏆';
+                rewardDiv.appendChild(badge);
+              }
+            }
+          });
+          updateProgress();
+        };
+      </script>
+    </body>
+    </html>
+      
