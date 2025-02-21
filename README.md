@@ -3,7 +3,7 @@
 
 
 
-[![Visit Live Website](https://img.shields.io/badge/Visit-DSA%20Mastery-blue?style=for-the-badge)](https://sumitkumar005.github.io/DSA-Mastery-The-Ultimate-Problem-Sheet/)
+[![Visit Live Website](https://img.shields.io/badge/Visit-DSA%20Mastery-blue?style=for-the-badge)](https://sumitkumar005.github.io/DSA-Mastery-The-Ultimate-Problems-Sheet/)
 
 This repository contains a comprehensive collection of **424** essential Data Structures and Algorithms questions. Whether you're preparing for technical interviews or simply looking to sharpen your problem-solving skills, this sheet covers a wide range of topics from easy to hard. These problems cover a wide range of topics, including arrays, strings, trees, graphs, dynamic programming, greedy algorithms, and more.
 
