@@ -1,6 +1,4 @@
-<p align="left">
-  <img src="https://komarev.com/ghpvc/?username=Sumitkumar005&repo=DSA-Mastery-The-Ultimate-Problems-Sheet&style=flat-square" alt="Repository Views">
-</p>
+
 
 
 # DSA-Mastery-Hub-The-Ultimate-Problem-Sheet
